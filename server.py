@@ -31,7 +31,7 @@ from dotenv import load_dotenv
 
 
 app = Flask(__name__)
-origins  = ['https://ai.workreel.com', 'https://www.ai.workreel.com' , 'https://www.dev.ai.workreel.com' ,'https://dev.ai.workreel.com' ,'http://localhost:8000','http://localhost:3000' , 'http://localhost:5100' , 'http://localhost:7000' , 'http://localhost:5000']
+origins  = ['http://localhost:8000','http://localhost:3000' , 'http://localhost:5100' , 'http://localhost:7000' , 'http://localhost:5000']
 CORS(app, origins=origins)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 1  # Disable caching
 
@@ -63,7 +63,7 @@ class Predict(Resource):
 
 
 
-api.add_resource(Predict, '/chat' )
+api.add_resource(Predict, '/callmodal' )
 
 
 
